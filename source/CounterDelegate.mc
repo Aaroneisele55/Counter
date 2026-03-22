@@ -15,13 +15,30 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
     private var totalTapYMax = 0;
     private var screenHeight = 0;
 
+
+    private function initializeTapZones() as Void {
+        // Get real display dimensions from system
+        var deviceSettings = System.getDeviceSettings();
+        var displayHeight = deviceSettings.screenHeight;
+        screenHeight = displayHeight;
+
+        c1TapYMin = 0;
+        c1TapYMax = (screenHeight * 0.2).toNumber();
+
+        c2TapYMin = (screenHeight * 0.25).toNumber();
+        c2TapYMax = (screenHeight * 0.55).toNumber();
+
+        // Total zone: bottom area
+        totalTapYMin = (screenHeight * 0.6).toNumber();
+        totalTapYMax = screenHeight;
+    }
     function initialize() {
         BehaviorDelegate.initialize();
     }
 
     function onMenu() as Boolean {
         WatchUi.pushView(
-            new Rez.Menus.MainMenu(),
+            new CounterSettingsMenu(),
             new CounterMenuDelegate(),
             WatchUi.SLIDE_UP
         );
@@ -94,7 +111,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             Application.Properties.setValue("c1", c1);
             WatchUi.requestUpdate();
             vibrateShort();
-            playTone(Attention.TONE_KEY);
+            playTone(Attention.TONE_LAP);
             return true;
         }
 
@@ -105,14 +122,14 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             Application.Properties.setValue("c2", c2);
             WatchUi.requestUpdate();
             vibrateShort();
-            playTone(Attention.TONE_KEY);
+            playTone(Attention.TONE_LAP);
             return true;
         }
 
         // Check if tap is in Total area - open menu
         if (y >= totalTapYMin && y <= totalTapYMax) {
             WatchUi.pushView(
-                new Rez.Menus.MainMenu(),
+                new CounterSettingsMenu(),
                 new CounterMenuDelegate(),
                 WatchUi.SLIDE_UP
             );
@@ -156,20 +173,5 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
         return false;
     }
 
-    private function initializeTapZones() as Void {
-        // Get real display dimensions from system
-        var deviceSettings = System.getDeviceSettings();
-        var displayHeight = deviceSettings.screenHeight;
-        screenHeight = displayHeight;
-
-        c1TapYMin = 0;
-        c1TapYMax = (screenHeight * 0.3).toNumber();
-
-        c2TapYMin = (screenHeight * 0.35).toNumber();
-        c2TapYMax = (screenHeight * 0.55).toNumber();
-
-        // Total zone: bottom area
-        totalTapYMin = (screenHeight * 0.6).toNumber();
-        totalTapYMax = screenHeight;
-    }
+    
 }

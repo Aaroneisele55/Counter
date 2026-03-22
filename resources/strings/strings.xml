@@ -4,9 +4,16 @@
     <string id="prompt">Press ENTER for C1, \n BACK for C2, \n MENU for Menu</string>
 
     <string id="reset">Reset Counters</string>
+    <string id="toggleVibration">Toggle Vibration</string>
+    <string id="toggleSound">Toggle Sound</string>
     <string id="exit">Exit App</string>
     <string id="counter1">Counter 1</string>
     <string id="counter2">Counter 2</string>
+    <string id="glanceCounter1" scope="glance">C1</string>
+    <string id="glanceCounter2" scope="glance">C2</string>
     <string id="vibrateEnabled">Vibrate on Press</string>
     <string id="soundEnabled">Feedback sounds enabled</string>
+    <string id="menuHint">Tap to \n open Menu</string>
+    <string id="increaseHint">Tap: +1</string>
+    <string id="decreaseHint">Hold: -1</string>
 </strings>

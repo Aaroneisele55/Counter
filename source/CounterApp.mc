@@ -1,7 +1,7 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
-
+(:glance)
 class CounterApp extends Application.AppBase {
 
     function initialize() {
@@ -17,6 +17,12 @@ class CounterApp extends Application.AppBase {
         if (Application.Properties.getValue("c2") == null) {
             Application.Properties.setValue("c2", 0);
         }
+        if (Application.Properties.getValue("vibrateEnabled") == null) {
+            Application.Properties.setValue("vibrateEnabled", true);
+        }
+        if (Application.Properties.getValue("soundEnabled") == null) {
+            Application.Properties.setValue("soundEnabled", false);
+        }
     }
 
     // onStop() is called when your application is exiting
@@ -26,6 +32,10 @@ class CounterApp extends Application.AppBase {
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
         return [ new CounterView(), new CounterDelegate() ];
+    }
+
+    function getGlanceView() as [WatchUi.GlanceView] or [WatchUi.GlanceView, WatchUi.GlanceViewDelegate] or Null {
+        return [ new CounterGlanceView() ];
     }
 
 }

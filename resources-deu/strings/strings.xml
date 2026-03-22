@@ -4,9 +4,16 @@
     <string id="prompt">Drücke ENTER für Z1, \n BACK für Z2, \n MENU für Menü</string>
 
     <string id="reset">Zähler zurücksetzen</string>
+    <string id="toggleVibration">Vibration umschalten</string>
+    <string id="toggleSound">Ton umschalten</string>
     <string id="exit">App beenden</string>
     <string id="counter1">Zähler 1</string>
     <string id="counter2">Zähler 2</string>
+    <string id="glanceCounter1" scope="glance">Z1</string>
+    <string id="glanceCounter2" scope="glance">Z2</string>
     <string id="vibrateEnabled">Vibration bei Tastendruck</string>
     <string id="soundEnabled">Töne ein/aus</string>
+    <string id="menuHint">Tippen \n für Menü</string>
+    <string id="increaseHint">Tippen: +1</string>
+    <string id="decreaseHint">Halten: -1</string>
 </strings>
