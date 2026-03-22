@@ -7,4 +7,6 @@
     <string id="exit">App beenden</string>
     <string id="counter1">Zähler 1</string>
     <string id="counter2">Zähler 2</string>
+    <string id="vibrateEnabled">Vibration bei Tastendruck</string>
+    <string id="soundEnabled">Töne ein/aus</string>
 </strings>

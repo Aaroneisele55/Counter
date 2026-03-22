@@ -7,4 +7,6 @@
     <string id="exit">Exit App</string>
     <string id="counter1">Counter 1</string>
     <string id="counter2">Counter 2</string>
+    <string id="vibrateEnabled">Vibrate on Press</string>
+    <string id="soundEnabled">Feedback sounds enabled</string>
 </strings>

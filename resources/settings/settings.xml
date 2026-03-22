@@ -7,4 +7,12 @@
 	<setting propertyKey="@Properties.c2" title="@Strings.counter2">
 		<settingConfig type="numeric" />
 	</setting>
+
+	<setting propertyKey="@Properties.vibrateEnabled" title="@Strings.vibrateEnabled">
+		<settingConfig type="boolean" />
+	</setting>
+
+	<setting propertyKey="@Properties.soundEnabled" title="@Strings.soundEnabled">
+		<settingConfig type="boolean" />
+	</setting>
 </settings>

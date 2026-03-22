@@ -2,7 +2,6 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
 import Toybox.Application;
-import Toybox.System;
 
 class CounterView extends WatchUi.View {
 
@@ -30,16 +29,13 @@ class CounterView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        System.println("DEBUG: onUpdate called");
         var height = dc.getHeight();
         var width = dc.getWidth();
-        System.println("DEBUG: screen size = " + width + "x" + height);
         
         // Get counter values
         var c1Val = Application.Properties.getValue("c1");
         var c2Val = Application.Properties.getValue("c2");
         var total = (c1Val as Lang.Number) + (c2Val as Lang.Number);
-        System.println("DEBUG: c1 = " + c1Val + ", c2 = " + c2Val + ", total = " + total);
         
         // Calculate adaptive positions - tighter spacing
         var yOffset = -40;

@@ -2,4 +2,6 @@
 <properties>
     <property id="c1" type="number">0</property>
     <property id="c2" type="number">0</property>
+    <property id="vibrateEnabled" type="boolean">True</property>
+    <property id="soundEnabled" type="boolean">False</property>
 </properties>
