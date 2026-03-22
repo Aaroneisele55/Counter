@@ -36,6 +36,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             var c1 = Application.Properties.getValue("c1") as Number;
             c1 = c1 + 1;
             Application.Properties.setValue("c1", c1);
+            vibrateShort();
             WatchUi.requestUpdate();
             return true;
         }
@@ -45,6 +46,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             var c2 = Application.Properties.getValue("c2") as Number;
             c2 = c2 + 1;
             Application.Properties.setValue("c2", c2);
+            vibrateShort();
             WatchUi.requestUpdate();
             return true;
         }
