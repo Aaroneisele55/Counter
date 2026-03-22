@@ -59,7 +59,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             Attention.vibrate(vibeData);
         }
     }
-     function vibrateLong() {
+    function vibrateLong() {
         if (Attention has :vibrate) {
             var vibeData = [
                 new Attention.VibeProfile(50, 150), 
