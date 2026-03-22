@@ -37,6 +37,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             c1 = c1 + 1;
             Application.Properties.setValue("c1", c1);
             WatchUi.requestUpdate();
+            vibrateShort();
             return true;
         }
 
@@ -46,6 +47,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
             c2 = c2 + 1;
             Application.Properties.setValue("c2", c2);
             WatchUi.requestUpdate();
+            vibrateShort();
             return true;
         }
 
@@ -63,7 +65,7 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
         if (Attention has :vibrate) {
             var vibeData = [
                 new Attention.VibeProfile(50, 150), 
-                new Attention.VibeProfile(0, 500), 
+                new Attention.VibeProfile(0, 150), 
                 new Attention.VibeProfile(50, 150), 
             ];
             Attention.vibrate(vibeData);
