@@ -5,7 +5,7 @@
         Use "Monkey C: Edit Application" from the Visual Studio Code command palette
         to update the application attributes.
     -->
-    <iq:application id="d86897f4-c152-4516-9042-36c8ab9e85b2" type="widget" name="@Strings.AppName" entry="CounterApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="4.2.0">
+    <iq:application id="0595b450-a97b-440f-a439-7238bd1e4c59" type="widget" name="@Strings.AppName" entry="CounterApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="4.2.0">
         <!--
             Use the following from the Visual Studio Code comand palette to edit
             the build targets:
