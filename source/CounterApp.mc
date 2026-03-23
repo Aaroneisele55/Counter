@@ -1,7 +1,7 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
-(:glance)
+
 class CounterApp extends Application.AppBase {
 
     function initialize() {
@@ -34,6 +34,7 @@ class CounterApp extends Application.AppBase {
         return [ new CounterView(), new CounterDelegate() ];
     }
 
+    (:glance)
     function getGlanceView() as [WatchUi.GlanceView] or [WatchUi.GlanceView, WatchUi.GlanceViewDelegate] or Null {
         return [ new CounterGlanceView() ];
     }
