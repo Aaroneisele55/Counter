@@ -63,10 +63,12 @@ class CounterView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // Draw numbers
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        // Draw numbers (active counter in green, inactive in white)
+        dc.setColor($.activeCounter == 1 ? Graphics.COLOR_GREEN : Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(centerX, c1Y, Graphics.FONT_NUMBER_HOT, "" + c1Val, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor($.activeCounter == 2 ? Graphics.COLOR_GREEN : Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(centerX, c2Y, Graphics.FONT_NUMBER_HOT, "" + c2Val, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(centerX, totalY, Graphics.FONT_NUMBER_HOT, "" + total, Graphics.TEXT_JUSTIFY_CENTER);
         
         // Draw hint label below total

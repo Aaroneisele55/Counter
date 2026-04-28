@@ -1,6 +1,10 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+
+// Tracks which counter is currently active (1 or 2); highlighted in green
+var activeCounter = 1;
+
 (:glance)
 class CounterApp extends Application.AppBase {
 

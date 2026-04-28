@@ -37,11 +37,13 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() as Boolean {
-        WatchUi.pushView(
-            new CounterSettingsMenu(),
-            new CounterMenuDelegate(),
-            WatchUi.SLIDE_UP
-        );
+        // Switch which counter is active (highlighted in green)
+        if ($.activeCounter == 1) {
+            $.activeCounter = 2;
+        } else {
+            $.activeCounter = 1;
+        }
+        WatchUi.requestUpdate();
         return true;
     }
 
@@ -49,22 +51,12 @@ class CounterDelegate extends WatchUi.BehaviorDelegate {
         var key = keyEvent.getKey();
 
         if (key == WatchUi.KEY_ENTER) {
-            var c1 = Application.Properties.getValue("c1") as Number;
-            c1 = c1 + 1;
-            Application.Properties.setValue("c1", c1);
+            var propKey = ($.activeCounter == 1) ? "c1" : "c2";
+            var val = Application.Properties.getValue(propKey) as Number;
+            val = val + 1;
+            Application.Properties.setValue(propKey, val);
             vibrateShort();
             WatchUi.requestUpdate();
-            vibrateShort();
-            return true;
-        }
-
-        if (key == WatchUi.KEY_ESC) {
-            var c2 = Application.Properties.getValue("c2") as Number;
-            c2 = c2 + 1;
-            Application.Properties.setValue("c2", c2);
-            vibrateShort();
-            WatchUi.requestUpdate();
-            vibrateShort();
             return true;
         }
 

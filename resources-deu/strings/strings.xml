@@ -1,7 +1,7 @@
 <strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <string id="AppName">Zähler</string>
 
-    <string id="prompt">Drücke ENTER für Z1, \n BACK für Z2, \n MENU für Menü</string>
+    <string id="prompt">MENU: Zähler wechseln \n ENTER: aktiven erhöhen</string>
 
     <string id="reset">Zähler zurücksetzen</string>
     <string id="toggleVibration">Vibration umschalten</string>
